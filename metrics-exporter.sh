@@ -20,3 +20,4 @@ while read -r node; do
     echo "swarm_info{id=\"$id\", hostname=\"$hostname\", status=\"$status\", availability=\"$availability\", manager_status=\"$manager_status\", engine_version=\"$engine_version\"} 1"
     echo "swarm_node_labels{id=\"$id\", hostname=\"$hostname\", labels=\"$node_labels\"} 1"
 done <<< "$swarm_nodes"
+
